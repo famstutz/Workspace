@@ -15,5 +15,4 @@ class Swiss extends Human {
         }
     }
 }
-
 ?>

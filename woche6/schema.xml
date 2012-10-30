@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="rentalcompany" defaultIdMethod="native">
+  <table name="car">
+    <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+    <column name="manufacturer" type="varchar" size="255" required="true" />
+    <column name="color" type="varchar" size="255" required="true" />
+    <column name="milage" type="integer" required="true"/>
+    <column name="maxspeed" type="integer" required="true"/>
+  </table>
+  <table name="customer">
+    <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+    <column name="name" type="varchar" size="128" required="true"/>
+  </table>
+  <table name="rentalaction">
+    <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+    <column name="car_id" type="integer" required="true"/>
+    <column name="customer_id" type="integer" required="true"/>
+    <column name="rentDate" type="timestamp" required="true"/>
+    <column name="returnDate" type="timestamp" required="false"/>
+    <foreign-key foreignTable="car">
+      <reference local="car_id" foreign="id"/>
+    </foreign-key>
+    <foreign-key foreignTable="customer">
+      <reference local="customer_id" foreign="id"/>
+    </foreign-key>
+  </table>
+</database>

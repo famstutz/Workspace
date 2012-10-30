@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+ <log>
+  <ident>propel-rentalcompany</ident>
+  <level>7</level>
+ </log>
+ <propel>
+  <datasources default="rentalcompany">
+   <datasource id="rentalcompany">
+   <adapter>mysql</adapter>
+   <connection>
+    <dsn>mysql:host=localhost;dbname=rentalcompany</dsn>
+    <phptype>mysql</phptype>
+    <user>florian</user>
+    <password>myPass</password>
+   </connection>
+  </datasource>
+ </datasources>
+</propel>
+</config>
